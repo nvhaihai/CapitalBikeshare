@@ -41,7 +41,6 @@ class FlowAttention(nn.Module):
         return x, None
 
 
-# Code implementation from https://github.com/shreyansh26/FlashAttention-PyTorch
 class FlashAttention(nn.Module):
     def __init__(self, mask_flag=True, factor=5, scale=None, attention_dropout=0.1, output_attention=False):
         super(FlashAttention, self).__init__()
