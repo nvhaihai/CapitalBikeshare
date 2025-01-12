@@ -7,7 +7,6 @@ from reformer_pytorch import LSHSelfAttention
 from einops import rearrange
 
 
-# Code implementation from https://github.com/thuml/Flowformer
 class FlowAttention(nn.Module):
     def __init__(self, attention_dropout=0.1):
         super(FlowAttention, self).__init__()
@@ -42,7 +41,6 @@ class FlowAttention(nn.Module):
         return x, None
 
 
-# Code implementation from https://github.com/shreyansh26/FlashAttention-PyTorch
 class FlashAttention(nn.Module):
     def __init__(self, mask_flag=True, factor=5, scale=None, attention_dropout=0.1, output_attention=False):
         super(FlashAttention, self).__init__()
@@ -161,7 +159,6 @@ class FullAttention(nn.Module):
             return (V.contiguous(), None)
 
 
-# Code implementation from https://github.com/zhouhaoyi/Informer2020
 class ProbAttention(nn.Module):
     def __init__(self, mask_flag=True, factor=5, scale=None, attention_dropout=0.1, output_attention=False):
         super(ProbAttention, self).__init__()
